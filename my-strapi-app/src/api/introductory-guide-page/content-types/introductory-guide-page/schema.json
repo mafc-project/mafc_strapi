@@ -19,6 +19,27 @@
     "entrance_documents_list": {
       "type": "json",
       "required": true
+    },
+    "initial_test_results_google_drive_folder": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    },
+    "enrollment_order_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::enrollment-order-list.enrollment-order-list"
+    },
+    "entrants_road_map": {
+      "displayName": "entrants_road_map",
+      "type": "component",
+      "repeatable": false,
+      "component": "entrants-road-map.entrants-road-map"
+    },
+    "entrance_exams_info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rtx-item.rules-and-services"
     }
   }
 }

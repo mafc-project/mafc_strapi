@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "degree_education_pages",
+  "info": {
+    "singularName": "degree-education-page",
+    "pluralName": "degree-education-pages",
+    "displayName": "DegreeEducationPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "universities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "link-card.link-card"
+    }
+  }
+}

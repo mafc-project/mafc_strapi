@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_entrants_road_map_entrants_road_maps",
+  "info": {
+    "displayName": "entrants_road_map"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "road_map": {
+      "displayName": "road_map",
+      "type": "component",
+      "repeatable": true,
+      "component": "road-map.road-map"
+    }
+  }
+}

@@ -33,6 +33,12 @@
     },
     "name": {
       "type": "string"
+    },
+    "contacts_datum": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contacts-page.contacts-page",
+      "inversedBy": "contacts"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "distance-learning-page",
     "pluralName": "distance-learning-pages",
-    "displayName": "distance_learning_page"
+    "displayName": "distance_learning_page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,11 @@
     },
     "form_link": {
       "type": "string"
+    },
+    "administrator": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::teacher.teacher"
     }
   }
 }

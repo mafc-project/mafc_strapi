@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "sports_drive_pages",
+  "info": {
+    "singularName": "sports-drive-page",
+    "pluralName": "sports-drive-pages",
+    "displayName": "SportsDrivePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

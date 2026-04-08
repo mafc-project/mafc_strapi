@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "optional_subjects_pages",
+  "info": {
+    "singularName": "optional-subjects-page",
+    "pluralName": "optional-subjects-pages",
+    "displayName": "OptionalSubjectsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}

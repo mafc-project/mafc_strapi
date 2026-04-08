@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "singularName": "social-media",
+    "pluralName": "social-medias",
+    "displayName": "SocialMedia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "social": {
+      "type": "component",
+      "repeatable": false,
+      "component": "social.social"
+    }
+  }
+}

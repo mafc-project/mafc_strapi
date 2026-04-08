@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "dual_form_of_learning_pages",
+  "info": {
+    "singularName": "dual-form-of-learning-page",
+    "pluralName": "dual-form-of-learning-pages",
+    "displayName": "DualFormOfLearningPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": true,
+      "component": "video-item.video-item"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

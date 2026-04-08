@@ -4,27 +4,31 @@
   "info": {
     "singularName": "domitory-page",
     "pluralName": "domitory-pages",
-    "displayName": "domitory_page"
+    "displayName": "domitory_page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "description": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
-      "required": false,
-      "customField": "plugin::ckeditor5.CKEditor"
-    },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "domitory_governments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::domitory-government.domitory-government"
     }
   }
 }

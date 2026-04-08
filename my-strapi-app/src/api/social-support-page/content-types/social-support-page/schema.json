@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "social_support_pages",
+  "info": {
+    "singularName": "social-support-page",
+    "pluralName": "social-support-pages",
+    "displayName": "SocialSupportPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "student_ratings_folder_id": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link-card.link-card"
+    }
+  }
+}

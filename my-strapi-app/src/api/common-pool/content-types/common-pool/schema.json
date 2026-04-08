@@ -4,17 +4,17 @@
   "info": {
     "singularName": "common-pool",
     "pluralName": "common-pools",
-    "displayName": "common_pool"
+    "displayName": "common_pool",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "pool": {
+    "poll_item": {
       "type": "component",
       "repeatable": false,
-      "component": "pool.pool",
-      "required": true
+      "component": "poll-item.poll-item"
     }
   }
 }

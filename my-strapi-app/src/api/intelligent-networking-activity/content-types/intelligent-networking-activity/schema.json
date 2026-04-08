@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "intelligent_networking_activities",
+  "info": {
+    "singularName": "intelligent-networking-activity",
+    "pluralName": "intelligent-networking-activities",
+    "displayName": "IntelligentNetworkingActivity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "activity": {
+      "type": "component",
+      "repeatable": false,
+      "component": "extracurricular-activity.extracurricular-activity"
+    }
+  }
+}

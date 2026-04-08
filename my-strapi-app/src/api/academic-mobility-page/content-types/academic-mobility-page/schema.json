@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "academic_mobility_pages",
+  "info": {
+    "singularName": "academic-mobility-page",
+    "pluralName": "academic-mobility-pages",
+    "displayName": "AcademicMobilityPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}

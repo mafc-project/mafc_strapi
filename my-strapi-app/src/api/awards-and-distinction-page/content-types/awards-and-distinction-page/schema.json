@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "awards_and_distinction_pages",
+  "info": {
+    "singularName": "awards-and-distinction-page",
+    "pluralName": "awards-and-distinction-pages",
+    "displayName": "AwardsAndDistinctionPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-width-title.image-width-title"
+    },
+    "page_title": {
+      "type": "string"
+    }
+  }
+}

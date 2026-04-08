@@ -20,6 +20,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::hero-data.hero-data"
+    },
+    "government_resourses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "link-card.link-card"
     }
   }
 }

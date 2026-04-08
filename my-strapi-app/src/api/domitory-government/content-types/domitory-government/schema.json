@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domitory_governments",
+  "info": {
+    "singularName": "domitory-government",
+    "pluralName": "domitory-governments",
+    "displayName": "DomitoryGovernment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mail": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social.social"
+    }
+  }
+}

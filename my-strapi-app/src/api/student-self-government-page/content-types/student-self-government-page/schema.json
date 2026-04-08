@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "student_self_government_pages",
+  "info": {
+    "singularName": "student-self-government-page",
+    "pluralName": "student-self-government-pages",
+    "displayName": "StudentSelfGovernmentPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "student_governments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student-government.student-government"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new"
+    }
+  }
+}

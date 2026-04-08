@@ -29,7 +29,7 @@
       "type": "integer"
     },
     "disciplines": {
-      "type": "string"
+      "type": "text"
     },
     "qualification": {
       "type": "string"
@@ -45,6 +45,15 @@
     },
     "credo": {
       "type": "string"
+    },
+    "adress": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "json"
     }
   }
 }

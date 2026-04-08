@@ -31,15 +31,15 @@
       "repeatable": false,
       "component": "form-titles.form-titles"
     },
-    "contact": {
-      "displayName": "contacts",
-      "type": "component",
-      "repeatable": true,
-      "component": "contact.contacts"
-    },
     "page": {
       "type": "string",
       "required": true
+    },
+    "contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::teacher.teacher",
+      "mappedBy": "contacts_datum"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "conceptual_principles_pages",
+  "info": {
+    "singularName": "conceptual-principles-page",
+    "pluralName": "conceptual-principles-pages",
+    "displayName": "ConceptualPrinciplesPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "educational_process_description": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "edu_process_participants_folder_id": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    },
+    "personality_orientation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rtx-item.rules-and-services"
+    }
+  }
+}

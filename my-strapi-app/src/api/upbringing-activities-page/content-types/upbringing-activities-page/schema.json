@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "upbringing_activities_pages",
+  "info": {
+    "singularName": "upbringing-activities-page",
+    "pluralName": "upbringing-activities-pages",
+    "displayName": "UpbringingActivitiesPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

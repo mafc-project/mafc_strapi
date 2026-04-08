@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "learning_by_teaching_pages",
+  "info": {
+    "singularName": "learning-by-teaching-page",
+    "pluralName": "learning-by-teaching-pages",
+    "displayName": "LearningByTeachingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "note": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rtx-item.rules-and-services"
+    }
+  }
+}

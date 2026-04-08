@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "regulatory_framework_pages",
+  "info": {
+    "singularName": "regulatory-framework-page",
+    "pluralName": "regulatory-framework-pages",
+    "displayName": "RegulatoryFrameworkPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}

@@ -33,15 +33,18 @@ export interface ContactContacts extends Struct.ComponentSchema {
     displayName: 'contacts';
   };
   attributes: {
+    adress: Schema.Attribute.String;
     birthday: Schema.Attribute.Date;
     credo: Schema.Attribute.String;
-    disciplines: Schema.Attribute.String;
+    disciplines: Schema.Attribute.Text;
     education: Schema.Attribute.Component<
       'teacher-education.teacher-education',
       true
     >;
     experience: Schema.Attribute.Integer;
+    mail: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    phone: Schema.Attribute.JSON;
     position: Schema.Attribute.String & Schema.Attribute.Required;
     professional_interests: Schema.Attribute.String;
     qualification: Schema.Attribute.String;
@@ -111,6 +114,18 @@ export interface EduPlatformEduPlatform extends Struct.ComponentSchema {
   };
 }
 
+export interface EntrantsRoadMapEntrantsRoadMap extends Struct.ComponentSchema {
+  collectionName: 'components_entrants_road_map_entrants_road_maps';
+  info: {
+    displayName: 'entrants_road_map';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    road_map: Schema.Attribute.Component<'road-map.road-map', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ExtracurricularActivityExtracurricularActivity
   extends Struct.ComponentSchema {
   collectionName: 'components_extracurricular_activity_extracurricular_activities';
@@ -164,6 +179,19 @@ export interface ImageWidthTitleImageWidthTitle extends Struct.ComponentSchema {
   };
 }
 
+export interface LinkCardLinkCard extends Struct.ComponentSchema {
+  collectionName: 'components_link_card_link_cards';
+  info: {
+    displayName: 'link_card';
+  };
+  attributes: {
+    decsription: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface LinkItemLinkItem extends Struct.ComponentSchema {
   collectionName: 'components_link_item_link_items';
   info: {
@@ -176,18 +204,45 @@ export interface LinkItemLinkItem extends Struct.ComponentSchema {
   };
 }
 
-export interface PoolPool extends Struct.ComponentSchema {
-  collectionName: 'components_pool_pools';
+export interface PollItemPollItem extends Struct.ComponentSchema {
+  collectionName: 'components_poll_item_poll_items';
   info: {
     description: '';
-    displayName: 'pool';
+    displayName: 'poll_item';
   };
   attributes: {
+    poll_item: Schema.Attribute.Component<'poll.poll', true>;
+  };
+}
+
+export interface PollPoll extends Struct.ComponentSchema {
+  collectionName: 'components_poll_polls';
+  info: {
+    displayName: 'poll';
+  };
+  attributes: {
+    link: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    type: Schema.Attribute.Enumeration<['pool', 'result']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'pool'>;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['poll', 'result']>;
+  };
+}
+
+export interface RoadMapRoadMap extends Struct.ComponentSchema {
+  collectionName: 'components_road_map_road_maps';
+  info: {
+    displayName: 'road_map';
+  };
+  attributes: {
+    date: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    markdown: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -221,6 +276,19 @@ export interface ServiceAccountServiceAccount extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'36969901'>;
     service_title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SocialSocial extends Struct.ComponentSchema {
+  collectionName: 'components_social_socials';
+  info: {
+    displayName: 'social';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      ['facebook', 'instagram', 'tiktok', 'youtube']
+    >;
   };
 }
 
@@ -302,14 +370,19 @@ declare module '@strapi/strapi' {
       'department.department': DepartmentDepartment;
       'discipline.discipline': DisciplineDiscipline;
       'edu-platform.edu-platform': EduPlatformEduPlatform;
+      'entrants-road-map.entrants-road-map': EntrantsRoadMapEntrantsRoadMap;
       'extracurricular-activity.extracurricular-activity': ExtracurricularActivityExtracurricularActivity;
       'form-titles.form-titles': FormTitlesFormTitles;
       'google-drive-folder-id.google-drive-folder-id': GoogleDriveFolderIdGoogleDriveFolderId;
       'image-width-title.image-width-title': ImageWidthTitleImageWidthTitle;
+      'link-card.link-card': LinkCardLinkCard;
       'link-item.link-item': LinkItemLinkItem;
-      'pool.pool': PoolPool;
+      'poll-item.poll-item': PollItemPollItem;
+      'poll.poll': PollPoll;
+      'road-map.road-map': RoadMapRoadMap;
       'rtx-item.rules-and-services': RtxItemRulesAndServices;
       'service-account.service-account': ServiceAccountServiceAccount;
+      'social.social': SocialSocial;
       'teacher-education.teacher-education': TeacherEducationTeacherEducation;
       'teacher-experience.teacher-experience': TeacherExperienceTeacherExperience;
       'vacancy-position.vacancy-position': VacancyPositionVacancyPosition;

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enrollment_order_lists",
+  "info": {
+    "singularName": "enrollment-order-list",
+    "pluralName": "enrollment-order-lists",
+    "displayName": "EnrollmentOrderList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "google_drive_doc_folder_id": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "admiddion_committe_pages",
+  "info": {
+    "singularName": "admiddion-committe-page",
+    "pluralName": "admiddion-committe-pages",
+    "displayName": "AdmiddionCommittePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "work_schedule": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dashboard-item.dashboard-item"
+    }
+  }
+}

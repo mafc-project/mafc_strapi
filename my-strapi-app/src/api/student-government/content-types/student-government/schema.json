@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_governments",
+  "info": {
+    "singularName": "student-government",
+    "pluralName": "student-governments",
+    "displayName": "StudentGovernment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "mail": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "social": {
+      "displayName": "social",
+      "type": "component",
+      "repeatable": true,
+      "component": "social.social"
+    }
+  }
+}

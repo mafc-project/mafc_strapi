@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "metodological_case_pages",
+  "info": {
+    "singularName": "metodological-case-page",
+    "pluralName": "metodological-case-pages",
+    "displayName": "MetodologicalCasePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}

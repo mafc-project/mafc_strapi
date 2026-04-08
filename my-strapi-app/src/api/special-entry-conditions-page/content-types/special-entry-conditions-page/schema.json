@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "special_entry_conditions_pages",
+  "info": {
+    "singularName": "special-entry-conditions-page",
+    "pluralName": "special-entry-conditions-pages",
+    "displayName": "SpecialEntryConditionsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}

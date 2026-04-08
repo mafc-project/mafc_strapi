@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "students_rights_and_obligations_pages",
+  "info": {
+    "singularName": "students-rights-and-obligations-page",
+    "pluralName": "students-rights-and-obligations-pages",
+    "displayName": "StudentsRightsAndObligationsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "google_drive_doc_folder_id": {
+      "type": "string"
+    }
+  }
+}

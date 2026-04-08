@@ -54,17 +54,32 @@
       "type": "string",
       "required": true
     },
-    "pool": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pool.pool"
-    },
     "google_drive_doc_folder_id": {
       "type": "string",
       "required": false
     },
     "speciality_rating_folder_id": {
       "type": "string"
+    },
+    "graduate_profile": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rtx-item.rules-and-services"
+    },
+    "monitoring_and_updating_edu_program_golder_id": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    },
+    "poll": {
+      "type": "component",
+      "repeatable": true,
+      "component": "poll-item.poll-item"
+    },
+    "suggestion_box": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link-card.link-card"
     }
   }
 }

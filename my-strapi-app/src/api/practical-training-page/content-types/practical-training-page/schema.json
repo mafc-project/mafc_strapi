@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "practical_training_pages",
+  "info": {
+    "singularName": "practical-training-page",
+    "pluralName": "practical-training-pages",
+    "displayName": "PracticalTrainingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

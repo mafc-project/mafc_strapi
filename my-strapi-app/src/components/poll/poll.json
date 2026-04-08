@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_pool_pools",
+  "collectionName": "components_poll_polls",
   "info": {
-    "displayName": "pool",
-    "description": ""
+    "displayName": "poll"
   },
   "options": {},
   "attributes": {
@@ -10,18 +9,16 @@
       "type": "string",
       "required": true
     },
-    "url": {
+    "link": {
       "type": "string",
       "required": true
     },
     "type": {
       "type": "enumeration",
       "enum": [
-        "pool",
+        "poll",
         "result"
-      ],
-      "required": true,
-      "default": "pool"
+      ]
     }
   }
 }

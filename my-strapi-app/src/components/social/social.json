@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_social_socials",
+  "info": {
+    "displayName": "social"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

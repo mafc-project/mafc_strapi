@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_poll_item_poll_items",
+  "info": {
+    "displayName": "poll_item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "poll_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "poll.poll"
+    }
+  }
+}

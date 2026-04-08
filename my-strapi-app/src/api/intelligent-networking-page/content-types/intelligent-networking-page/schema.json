@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "intelligent_networking_pages",
+  "info": {
+    "singularName": "intelligent-networking-page",
+    "pluralName": "intelligent-networking-pages",
+    "displayName": "IntelligentNetworkingPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-width-title.image-width-title"
+    },
+    "intelligent_networking_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::intelligent-networking-activity.intelligent-networking-activity"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "volunteering_pages",
+  "info": {
+    "singularName": "volunteering-page",
+    "pluralName": "volunteering-pages",
+    "displayName": "VolunteeringPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new"
+    }
+  }
+}

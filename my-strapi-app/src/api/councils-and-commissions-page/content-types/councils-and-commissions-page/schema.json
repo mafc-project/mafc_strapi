@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "councils_and_commissions_pages",
+  "info": {
+    "singularName": "councils-and-commissions-page",
+    "pluralName": "councils-and-commissions-pages",
+    "displayName": "CouncilsAndCommissionsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "pedagogical_council_folder_id": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    },
+    "all_commission_folder_id": {
+      "type": "component",
+      "repeatable": false,
+      "component": "google-drive-folder-id.google-drive-folder-id"
+    }
+  }
+}
