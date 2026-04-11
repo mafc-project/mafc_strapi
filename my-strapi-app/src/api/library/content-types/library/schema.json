@@ -47,6 +47,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::e-library.e-library"
+    },
+    "google_drive_folder_id": {
+      "type": "string"
     }
   }
 }
