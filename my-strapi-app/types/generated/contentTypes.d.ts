@@ -1091,6 +1091,35 @@ export interface ApiDevelopmentOfAcademicIntegrityDevelopmentOfAcademicIntegrity
   };
 }
 
+export interface ApiDiscussionPageDiscussionPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'discussion_pages';
+  info: {
+    displayName: 'DiscussionPage';
+    pluralName: 'discussion-pages';
+    singularName: 'discussion-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.Component<'department.department', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::discussion-page.discussion-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDistanceLearningPageDistanceLearningPage
   extends Struct.SingleTypeSchema {
   collectionName: 'distance_learning_pages';
@@ -1828,6 +1857,7 @@ export interface ApiLibraryLibrary extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::e-library.e-library'
     >;
+    google_drive_folder_id: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3441,6 +3471,7 @@ declare module '@strapi/strapi' {
       'api::degree-education-page.degree-education-page': ApiDegreeEducationPageDegreeEducationPage;
       'api::department-page.department-page': ApiDepartmentPageDepartmentPage;
       'api::development-of-academic-integrity.development-of-academic-integrity': ApiDevelopmentOfAcademicIntegrityDevelopmentOfAcademicIntegrity;
+      'api::discussion-page.discussion-page': ApiDiscussionPageDiscussionPage;
       'api::distance-learning-page.distance-learning-page': ApiDistanceLearningPageDistanceLearningPage;
       'api::domitory-government.domitory-government': ApiDomitoryGovernmentDomitoryGovernment;
       'api::domitory-page.domitory-page': ApiDomitoryPageDomitoryPage;

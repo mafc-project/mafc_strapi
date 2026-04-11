@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "discussion_pages",
+  "info": {
+    "singularName": "discussion-page",
+    "pluralName": "discussion-pages",
+    "displayName": "DiscussionPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    }
+  }
+}
