@@ -22,6 +22,16 @@
     },
     "subtitle": {
       "type": "string"
+    },
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new"
     }
   }
 }

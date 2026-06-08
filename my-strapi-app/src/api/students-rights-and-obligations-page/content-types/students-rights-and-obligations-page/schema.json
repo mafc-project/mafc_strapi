@@ -4,17 +4,17 @@
   "info": {
     "singularName": "students-rights-and-obligations-page",
     "pluralName": "students-rights-and-obligations-pages",
-    "displayName": "StudentsRightsAndObligationsPage"
+    "displayName": "StudentsRightsAndObligationsPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "page_title": {
-      "type": "string"
-    },
-    "google_drive_doc_folder_id": {
-      "type": "string"
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
     }
   }
 }

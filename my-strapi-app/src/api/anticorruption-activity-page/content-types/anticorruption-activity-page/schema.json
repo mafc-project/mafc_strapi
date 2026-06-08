@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "college_history_pages",
+  "collectionName": "anticorruption_activity_pages",
   "info": {
-    "singularName": "college-history-page",
-    "pluralName": "college-history-pages",
-    "displayName": "CollegeHistoryPage",
-    "description": ""
+    "singularName": "anticorruption-activity-page",
+    "pluralName": "anticorruption-activity-pages",
+    "displayName": "AnticorruptionActivityPage"
   },
   "options": {
     "draftAndPublish": true

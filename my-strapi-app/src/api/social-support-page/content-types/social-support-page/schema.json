@@ -16,11 +16,6 @@
       "repeatable": false,
       "component": "department.department"
     },
-    "teacher": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::teacher.teacher"
-    },
     "student_ratings_folder_id": {
       "type": "component",
       "repeatable": false,
@@ -28,7 +23,7 @@
     },
     "link": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "link-card.link-card"
     }
   }
