@@ -11,9 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "page_title": {
-      "type": "string"
-    },
     "dashboard": {
       "type": "component",
       "repeatable": true,
@@ -48,8 +45,10 @@
       "relation": "oneToMany",
       "target": "api::e-library.e-library"
     },
-    "google_drive_folder_id": {
-      "type": "string"
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "department.department"
     }
   }
 }

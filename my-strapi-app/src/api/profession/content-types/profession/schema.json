@@ -27,10 +27,6 @@
       "type": "string",
       "required": true
     },
-    "tuition_fees": {
-      "type": "integer",
-      "required": true
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -80,6 +76,9 @@
       "type": "component",
       "repeatable": false,
       "component": "link-card.link-card"
+    },
+    "tuition_fees": {
+      "type": "text"
     }
   }
 }

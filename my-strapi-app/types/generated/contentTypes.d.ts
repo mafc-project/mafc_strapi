@@ -588,6 +588,35 @@ export interface ApiAnimalHusbandryLaboratoryPageAnimalHusbandryLaboratoryPage
   };
 }
 
+export interface ApiAnticorruptionActivityPageAnticorruptionActivityPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'anticorruption_activity_pages';
+  info: {
+    displayName: 'AnticorruptionActivityPage';
+    pluralName: 'anticorruption-activity-pages';
+    singularName: 'anticorruption-activity-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.Component<'department.department', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::anticorruption-activity-page.anticorruption-activity-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAwardsAndDistinctionPageAwardsAndDistinctionPage
   extends Struct.SingleTypeSchema {
   collectionName: 'awards_and_distinction_pages';
@@ -747,6 +776,7 @@ export interface ApiCollegeHistoryPageCollegeHistoryPage
   extends Struct.SingleTypeSchema {
   collectionName: 'college_history_pages';
   info: {
+    description: '';
     displayName: 'CollegeHistoryPage';
     pluralName: 'college-history-pages';
     singularName: 'college-history-page';
@@ -758,20 +788,13 @@ export interface ApiCollegeHistoryPageCollegeHistoryPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    data: Schema.Attribute.Component<'department.department', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::college-history-page.college-history-page'
     > &
       Schema.Attribute.Private;
-    markdown: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    page_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1853,11 +1876,11 @@ export interface ApiLibraryLibrary extends Struct.SingleTypeSchema {
       'dashboard-item.dashboard-item',
       true
     >;
+    data: Schema.Attribute.Component<'department.department', false>;
     e_libraries: Schema.Attribute.Relation<
       'oneToMany',
       'api::e-library.e-library'
     >;
-    google_drive_folder_id: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1865,7 +1888,6 @@ export interface ApiLibraryLibrary extends Struct.SingleTypeSchema {
       'api::library.library'
     > &
       Schema.Attribute.Private;
-    page_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     rules: Schema.Attribute.Component<'rtx-item.rules-and-services', true>;
     services: Schema.Attribute.Component<'rtx-item.rules-and-services', true>;
@@ -2346,7 +2368,7 @@ export interface ApiProfessionProfession extends Struct.CollectionTypeSchema {
     suggestion_box: Schema.Attribute.Component<'link-card.link-card', false>;
     term_of_study: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    tuition_fees: Schema.Attribute.Integer & Schema.Attribute.Required;
+    tuition_fees: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2431,12 +2453,14 @@ export interface ApiSareerPageSareerPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    data: Schema.Attribute.Component<'department.department', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::sareer-page.sareer-page'
     > &
       Schema.Attribute.Private;
+    news: Schema.Attribute.Relation<'oneToMany', 'api::new.new'>;
     page_title: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.String;
@@ -2491,7 +2515,7 @@ export interface ApiSocialSupportPageSocialSupportPage
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     data: Schema.Attribute.Component<'department.department', false>;
-    link: Schema.Attribute.Component<'link-card.link-card', false>;
+    link: Schema.Attribute.Component<'link-card.link-card', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2503,7 +2527,6 @@ export interface ApiSocialSupportPageSocialSupportPage
       'google-drive-folder-id.google-drive-folder-id',
       false
     >;
-    teacher: Schema.Attribute.Relation<'oneToOne', 'api::teacher.teacher'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2644,6 +2667,7 @@ export interface ApiStudentsRightsAndObligationsPageStudentsRightsAndObligations
   extends Struct.SingleTypeSchema {
   collectionName: 'students_rights_and_obligations_pages';
   info: {
+    description: '';
     displayName: 'StudentsRightsAndObligationsPage';
     pluralName: 'students-rights-and-obligations-pages';
     singularName: 'students-rights-and-obligations-page';
@@ -2655,14 +2679,13 @@ export interface ApiStudentsRightsAndObligationsPageStudentsRightsAndObligations
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    google_drive_doc_folder_id: Schema.Attribute.String;
+    data: Schema.Attribute.Component<'department.department', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::students-rights-and-obligations-page.students-rights-and-obligations-page'
     > &
       Schema.Attribute.Private;
-    page_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -3456,6 +3479,7 @@ declare module '@strapi/strapi' {
       'api::administration-page.administration-page': ApiAdministrationPageAdministrationPage;
       'api::admission-calendar.admission-calendar': ApiAdmissionCalendarAdmissionCalendar;
       'api::animal-husbandry-laboratory-page.animal-husbandry-laboratory-page': ApiAnimalHusbandryLaboratoryPageAnimalHusbandryLaboratoryPage;
+      'api::anticorruption-activity-page.anticorruption-activity-page': ApiAnticorruptionActivityPageAnticorruptionActivityPage;
       'api::awards-and-distinction-page.awards-and-distinction-page': ApiAwardsAndDistinctionPageAwardsAndDistinctionPage;
       'api::bank-account-page.bank-account-page': ApiBankAccountPageBankAccountPage;
       'api::career-orientation-and-image-formation.career-orientation-and-image-formation': ApiCareerOrientationAndImageFormationCareerOrientationAndImageFormation;
